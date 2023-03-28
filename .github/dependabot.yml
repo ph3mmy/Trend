@@ -1,0 +1,27 @@
+version: 2
+
+updates:
+  - package-ecosystem: "all"
+    directory: "/"
+    schedule:
+      interval: "hourly"
+      hours: 1
+    labels:
+      - "dependencies"
+    allow:
+      - dependency-type: "all"
+    create-merge-commit: false
+    group: "dependabot-updates"
+  - package-ecosystem: "gradle"
+    directory: "gradle/"
+    schedule:
+      interval: "hourly"
+      hours: 1
+    allow:
+      - dependency-type: "direct"
+      - dependency-name: "org.jetbrains.kotlin"
+      - dependency-name: "androidx.compose.compiler"
+    labels:
+      - "dependencies"
+    create-merge-commit: false
+    group: "dependabot-updates-kotlin-compose"
