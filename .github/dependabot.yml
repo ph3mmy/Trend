@@ -5,39 +5,27 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "01:13"
+      time: "01:18"
       timezone: "Europe/Berlin"
     labels:
       - "dependencies"
     allow:
       - dependency-type: "all"
-    group: "dependabot-updates"
-    automerge:
-      - security: true
-      - dependency-name: "org.jetbrains.kotlin"
-      - dependency-name: "androidx.compose.compiler"
     commit-message:
       prefix: "deps:"
-      include: "dependencies"
+      include: "scope"
   - package-ecosystem: "gradle"
     directory: "gradle/"
     schedule:
       interval: "daily"
-      time: "01:13"
+      time: "01:18"
       timezone: "Europe/Berlin"
-    automerge:
-      - security: true
+    allow:
+      - dependency-type: "direct"
       - dependency-name: "org.jetbrains.kotlin"
       - dependency-name: "androidx.compose.compiler"
     labels:
-      - "dependencies"
-    group: "dependabot-updates-kotlin-compose"
+      - "dependencies, compose, kotlin"
     commit-message:
-      prefix: "deps:"
-      include: "dependencies"
-    filters:
-      - type: "requirement"
-        update-type: "direct"
-        match-update-dependency-names:
-          - "org.jetbrains.kotlin"
-          - "androidx.compose.compiler"
+      prefix: "deps-compose-kotlin:"
+      include: "scope"
