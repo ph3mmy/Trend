@@ -1,11 +1,12 @@
 version: 2
 
 updates:
-  - package-ecosystem: "all"
+  - package-ecosystem: "gradle"
     directory: "/"
     schedule:
-      interval: "hourly"
-      hours: 1
+      interval: "daily"
+      time: "00:50"
+      timezone: "Europe/Berlin"
     labels:
       - "dependencies"
     allow:
@@ -15,8 +16,9 @@ updates:
   - package-ecosystem: "gradle"
     directory: "gradle/"
     schedule:
-      interval: "hourly"
-      hours: 1
+      interval: "daily"
+      time: "00:50"
+      timezone: "Europe/Berlin"
     allow:
       - dependency-type: "direct"
       - dependency-name: "org.jetbrains.kotlin"
