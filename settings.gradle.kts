@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -15,3 +17,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Trend"
 include(":app")
+include(":core:data")
+include(":core:database")
+include(":core:testing")
+include(":core:ui")
+include(":feature:home")

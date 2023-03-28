@@ -7,6 +7,7 @@ sdkMin = "26"
 sdkTarget = "33"
 
 androidGradlePlugin = "7.4.1"
+androidxAppCompat = "1.6.1"
 androidxCore = "1.9.0"
 androidxEspresso = "3.5.0"
 androidxTestExt = "1.1.4"
@@ -21,6 +22,7 @@ room = "2.4.3"
 
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "composeActivity" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
 androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
