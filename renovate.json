@@ -1,6 +1,46 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    "group:all",
+    ":dependencyDashboard",
+    "schedule:daily"
+  ],
+  "baseBranches": [
+    "master"
+  ],
+  "commitMessageExtra": "{{{currentValue}}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "androidx.compose.compiler:compiler"
+      ],
+      "groupName": "kotlin"
+    },
+    {
+      "matchPackagePatterns": [
+        "org.jetbrains.kotlin.*"
+      ],
+      "groupName": "kotlin"
+    },
+    {
+      "excludePackageNames": [
+        "rubocop",
+        "faraday",
+        "json",
+        "os",
+        "nokogiri",
+        "actions/github-script",
+        "hashicorp/vault-action",
+        "ruby"
+      ]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "rebaseWhen": "behind-base-branch",
+  "branchPrefix": "feature/MOBD-2450_renovate_",
+  "separateMajorMinor": true
+
 }
