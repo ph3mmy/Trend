@@ -12,19 +12,19 @@ updates:
     allow:
       - dependency-type: "all"
     target-branch: "develop"
-  - package-ecosystem: "gradle"
-    directory: "gradle/"
-    schedule:
-      interval: "daily"
-      time: "07:58"
-      timezone: "Europe/Berlin"
-    allow:
-      - dependency-type: "direct"
-      - dependency-name: "org.jetbrains.kotlin"
-      - dependency-name: "androidx.compose.compiler"
-    labels:
-      - "dependencies, compose, kotlin"
-    commit-message:
-      prefix: "deps-compose-kotlin:"
-      include: "scope"
-    target-branch: "develop"
+#  - package-ecosystem: "gradle"
+#    directory: "gradle/"
+#    schedule:
+#      interval: "daily"
+#      time: "07:58"
+#      timezone: "Europe/Berlin"
+#    allow:
+#      - dependency-type: "direct"
+#      - dependency-name: "org.jetbrains.kotlin"
+#      - dependency-name: "androidx.compose.compiler"
+#    labels:
+#      - "dependencies, compose, kotlin"
+#    commit-message:
+#      prefix: "deps-compose-kotlin:"
+#      include: "scope"
+#    target-branch: "develop"
