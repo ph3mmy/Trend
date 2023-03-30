@@ -2,10 +2,10 @@ version: 2
 
 updates:
   - package-ecosystem: "gradle"
-    directory: "gradle/"
+    directory: "/"
     schedule:
       interval: "daily"
-      time: "08:21"
+      time: "08:25"
       timezone: "Europe/Berlin"
     labels:
       - "dependencies"
