@@ -5,7 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "08:34"
+      time: "09:20"
       timezone: "Europe/Berlin"
     labels:
       - "dependencies"
@@ -16,7 +16,7 @@ updates:
     directory: "gradle/"
     schedule:
       interval: "daily"
-      time: "08:34"
+      time: "09:20"
       timezone: "Europe/Berlin"
     allow:
       - dependency-type: "direct"
