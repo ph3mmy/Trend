@@ -2,6 +2,7 @@
 
 plugins {
     id("com.trend.application")
+    id("com.trend.compose.application")
 }
 
 android {
@@ -9,9 +10,6 @@ android {
 }
 
 dependencies {
-
-    implementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)

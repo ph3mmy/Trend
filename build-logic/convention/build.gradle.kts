@@ -18,5 +18,9 @@ gradlePlugin {
             id = "com.trend.application"
             implementationClass = "AndroidApplicationPlugin"
         }
+        register("ComposeApplicationPlugin") {
+            id = "com.trend.compose.application"
+            implementationClass = "AndroidApplicationComposePlugin"
+        }
     }
 }
