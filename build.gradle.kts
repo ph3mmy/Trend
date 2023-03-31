@@ -16,7 +16,7 @@ buildscript {
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.jvm) apply false
-    id("com.github.ben-manes.versions") version "0.41.0"
+    id("com.github.ben-manes.versions") version "0.46.0"
     id("nl.littlerobots.version-catalog-update") version "0.8.0"
 }
 
