@@ -3,7 +3,7 @@
   "extends": [
     "config:base",
     "group:all",
-    ":disableDependencyDashboard",
+    ":dependencyDashboard",
     "schedule:daily"
   ],
   "baseBranches": [
