@@ -3,11 +3,11 @@
   "extends": [
     "config:base",
     "group:all",
-    ":dependencyDashboard",
+    ":disableDependencyDashboard",
     "schedule:daily"
   ],
   "baseBranches": [
-    "main"
+    "master"
   ],
   "commitMessageExtra": "{{{currentValue}}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
   "packageRules": [
@@ -24,7 +24,7 @@
       "groupName": "kotlin"
     },
     {
-      "excludePackageNames": [
+      "matchDepNames": [
         "rubocop",
         "faraday",
         "json",
@@ -32,15 +32,20 @@
         "nokogiri",
         "actions/github-script",
         "hashicorp/vault-action",
-        "ruby"
-      ]
+        "hf.maven-publish",
+        "ruby",
+        "gradle"
+      ],
+      "enabled": false
     }
   ],
   "vulnerabilityAlerts": {
     "enabled": true
   },
   "rebaseWhen": "behind-base-branch",
-  "branchPrefix": "feature/MOBD-2450_renovate_",
+  "branchPrefix": "feature/MOBD-2450_Dependency-update-",
+  "commitMessagePrefix": "MOBD-2450 - ",
+  "ignoreUnstable": true,
   "separateMajorMinor": true
 
 }
