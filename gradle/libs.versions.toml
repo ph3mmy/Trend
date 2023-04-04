@@ -20,6 +20,7 @@ kotlin = "1.8.10"
 ktlint = "0.47.1"
 lint = "30.4.2"
 room = "2.4.3"
+showkase = "1.0.0-beta17"
 
 [libraries]
 # Dependencies of the included build-logic
@@ -40,6 +41,11 @@ androidx-test-ext = { module = "androidx.test.ext:junit-ktx", version.ref = "and
 junit4 = { module = "junit:junit", version.ref = "junit4" }
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 lint-api = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
+
+# added for testing. TODO: remove
+showkase = { module = "com.airbnb.android:showkase", version.ref = "showkase" }
+showkase-processor = { module = "com.airbnb.android:showkase-processor", version.ref = "showkase" }
+showkase-screenshot-testing = { module = "com.airbnb.android:showkase-screenshot-testing", version.ref = "showkase" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
