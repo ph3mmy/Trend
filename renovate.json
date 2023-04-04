@@ -37,6 +37,10 @@
         "gradle"
       ],
       "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["com.airbnb.android.*"],
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z]+\\d*)*$/"
     }
   ],
   "vulnerabilityAlerts": {
