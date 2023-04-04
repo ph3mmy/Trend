@@ -18,6 +18,8 @@ dependencies {
     implementation(libs.androidx.compose.material)
 
     compileOnly(libs.lint.api)
+    
+    implementation(libs.showkase)
 
     testImplementation(libs.junit4)
     androidTestImplementation(libs.androidx.test.ext)
