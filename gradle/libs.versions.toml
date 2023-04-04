@@ -20,7 +20,7 @@ kotlin = "1.8.10"
 ktlint = "0.47.1"
 lint = "30.4.2"
 room = "2.4.3"
-showkase = "1.0.0-beta17"
+showkase = "1.0.0-beta18"
 
 [libraries]
 # Dependencies of the included build-logic
