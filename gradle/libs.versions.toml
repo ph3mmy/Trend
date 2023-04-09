@@ -8,7 +8,7 @@ sdkTarget = "33"
 
 androidGradlePlugin = "7.4.2"
 androidxAppCompat = "1.6.1"
-androidxCore = "1.9.0"
+androidxCore = "1.10.0"
 androidxEspresso = "3.5.1"
 androidxTestExt = "1.1.5"
 composeActivity = "1.7.0"
