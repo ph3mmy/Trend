@@ -26,15 +26,8 @@
     {
       "matchDepNames": [
         "rubocop",
-        "faraday",
-        "json",
-        "os",
         "nokogiri",
-        "actions/github-script",
-        "hashicorp/vault-action",
-        "hf.maven-publish",
-        "ruby",
-        "gradle"
+        "ruby"
       ],
       "enabled": false
     },
