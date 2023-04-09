@@ -18,7 +18,7 @@ jobs:
         run: ./gradlew test
 
       - name: Upload Test Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: unit-test-report # todo: merge all test report across different modules
           path: app/build/reports/tests/testDebugUnitTest
