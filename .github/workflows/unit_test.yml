@@ -1,8 +1,5 @@
 name: Unit Test
 
-permissions:
-  checks: write
-
 on:
   push:
     branches: [ main ]
