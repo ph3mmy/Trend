@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup JDK
         uses: actions/setup-java@v1
@@ -34,7 +34,7 @@ jobs:
           ./gradlew clean test
 
       - name: Generate Test Report
-        uses: mikepenz/action-junit-report@v2.1.0
+        uses: mikepenz/action-junit-report@v3
         with:
-          path: '**/build/test-results/**/*.xml'
+          path: '**/build/test-results/test/TEST-*.xml'
           fail_on_empty: true
