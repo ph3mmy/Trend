@@ -26,12 +26,26 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle-
 
-      - name: Run unit tests
-        run: |
-          ./gradlew testDebugUnitTest
+      - name: Unit Test
+        run: ./gradlew testDebugUnitTest
 
-      - name: Generate Test Report
-        uses: test-summary/action@v4.0.0
+      - name: Upload Test Reports Folder
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }} # IMPORTANT: Upload reports regardless of status
         with:
-          path: |
-            '**/build/test-results/test/TEST-*.xml'
+          name: reports
+          path: app/build/test-results # path to where the xml test results are stored
+
+        report:
+          runs-on: ubuntu-latest
+          needs: test # The report job will run after test job
+          if: ${{ always() }} # IMPORTANT: Execute report job regardless of status
+          steps:
+            - name: Download Test Reports Folder
+              uses: actions/download-artifact@v2
+              with:
+                name: reports
+
+            - name: Android Test Report
+              uses: asadmansr/android-test-report-action@v1.2.0
+
