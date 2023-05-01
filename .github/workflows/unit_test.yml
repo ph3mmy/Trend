@@ -37,12 +37,17 @@ jobs:
           require_tests: true
           report_paths: '**/build/test-results/**/TEST-*.xml'
 
+      - name: Install JUnit report merger
+        run: npm install -g junit-report-merger
+      - name: run report merger
+        run: jrm app/build/reports/tests/combined.xml "**/test-results/**/TEST-*.xml"
+
       - name: Upload Test Reports Folder
         uses: actions/upload-artifact@v2
         if: ${{ always() }} # IMPORTANT: Upload reports regardless of status
         with:
           name: reports
-          path: app/build/reports/tests/testDebugUnitTest # path to where the xml test results are stored
+          path: app/build/reports/tests/combined.xml # path to where the xml test results are stored
 
   report:
     runs-on: ubuntu-latest
