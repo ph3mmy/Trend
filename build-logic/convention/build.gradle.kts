@@ -22,5 +22,9 @@ gradlePlugin {
             id = "com.trend.compose.application"
             implementationClass = "AndroidApplicationComposePlugin"
         }
+        register("TrendJacocoApplicationPlugin") {
+            id = "com.trend.jacoco.application"
+            implementationClass = "TrendJacocoPlugin"
+        }
     }
 }

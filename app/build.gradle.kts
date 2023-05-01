@@ -3,11 +3,14 @@
 plugins {
     id("com.trend.application")
     id("com.trend.compose.application")
+    id("com.trend.jacoco.application")
+    id("jacoco")
 }
 
 android {
     namespace = "com.oluwafemi.trend"
 }
+
 
 dependencies {
 

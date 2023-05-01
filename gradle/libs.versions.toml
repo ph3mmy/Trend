@@ -16,6 +16,8 @@ composeBom = "2023.04.00"
 composeCompiler = "1.4.3"
 coroutines = "1.6.4"
 junit4 = "4.13.2"
+jacocoVersion = "0.16.0"
+junitJacoco = "0.8.8"
 kotlin = "1.8.10"
 ktlint = "0.47.1"
 lint = "30.4.2"
@@ -51,4 +53,5 @@ showkase-screenshot-testing = { module = "com.airbnb.android:showkase-screenshot
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+jacoco-plugin = { id = "com.vanniktech.android.junit.jacoco", version.ref = "jacocoVersion" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
