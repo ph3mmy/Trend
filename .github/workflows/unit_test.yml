@@ -34,6 +34,7 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         with:
           commit: ${{github.event.workflow_run.head_sha}}
+          require_tests: true
           report_paths: '**/build/test-results/test/TEST-*.xml'
 
       - name: Upload Test Reports Folder
