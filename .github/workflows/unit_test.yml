@@ -36,7 +36,7 @@ jobs:
           report_paths: '**/build/test-results/test/TEST-*.xml'
 
       - name: Upload Test Reports Folder
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ always() }} # IMPORTANT: Upload reports regardless of status
         with:
           name: reports
@@ -48,7 +48,7 @@ jobs:
     if: ${{ always() }} # IMPORTANT: Execute report job regardless of status
     steps:
       - name: Download Test Reports Folder
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: reports
 
