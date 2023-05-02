@@ -2,7 +2,7 @@
 
 plugins {
     id("com.trend.application")
-    id("com.trend.compose.application")
+    id("com.trend.compose")
     id("com.trend.jacoco.application")
     id("jacoco")
 }
