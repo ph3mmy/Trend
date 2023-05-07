@@ -54,7 +54,7 @@ class AndroidApplicationPlugin : Plugin<Project> {
                         proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
                     }
                 }
-                packagingOptions {
+                packaging {
                     resources {
                         excludes.add("/META-INF/{AL2.0,LGPL2.1}")
                     }
