@@ -10,25 +10,30 @@ java{
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
 
 gradlePlugin {
     plugins {
-        register("TrendApplicationPlugin") {
+        register("trendApplicationPlugin") {
             id = "com.trend.application"
             implementationClass = "AndroidApplicationPlugin"
         }
-        register("TrendAndroidLibraryPlugin") {
+        register("trendAndroidLibraryPlugin") {
             id = "com.trend.library"
             implementationClass = "AndroidLibraryPlugin"
         }
-        register("ComposePlugin") {
+        register("composePlugin") {
             id = "com.trend.compose"
             implementationClass = "TrendComposePlugin"
         }
-        register("TrendJacocoApplicationPlugin") {
+        register("trendJacocoApplicationPlugin") {
             id = "com.trend.jacoco.application"
             implementationClass = "TrendJacocoPlugin"
+        }
+        register("trendHiltPlugin") {
+            id = "com.trend.hilt"
+            implementationClass = "TrendHiltPlugin"
         }
     }
 }
