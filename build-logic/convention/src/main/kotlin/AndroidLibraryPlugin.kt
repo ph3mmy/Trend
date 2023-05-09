@@ -1,12 +1,10 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.api.dsl.LibraryExtension
-import com.oluwafemi.trend.compileSDK
 import com.oluwafemi.trend.configureKotlinAndroid
-import com.oluwafemi.trend.minSDK
+import com.oluwafemi.trend.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.getByType
 
 class AndroidLibraryPlugin: Plugin<Project> {
@@ -20,13 +18,12 @@ class AndroidLibraryPlugin: Plugin<Project> {
 }
 
 private fun Project.applyAndroid() {
-    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
     extensions.getByType<LibraryExtension>().apply {
         configureKotlinAndroid(this)
 
-        compileSdk = libs.compileSDK()
+        compileSdk = libs.versions.sdkCompile.get().toInt()
         defaultConfig {
-            minSdk = libs.minSDK()
+            minSdk = libs.versions.sdkMin.get().toInt()
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
             consumerProguardFiles("consumer-rules.pro")
         }

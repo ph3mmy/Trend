@@ -3,42 +3,39 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.CommonExtension
 import com.android.build.api.dsl.LibraryExtension
+import com.oluwafemi.trend.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalog
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.findByType
-import org.gradle.kotlin.dsl.getByType
 
 class TrendComposePlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
         with(target) {
-            val libs = this.extensions.getByType<VersionCatalogsExtension>().named("libs")
-            applyDependencies(libs)
-            applyExtensions(libs)
+            applyDependencies()
+            applyExtensions()
         }
     }
 
-    private fun Project.applyDependencies(libs: VersionCatalog) {
+    private fun Project.applyDependencies() {
         dependencies {
-            val bom = libs.findLibrary("androidx-compose-bom").get()
+            val bom = libs.androidx.compose.bom.get()
             add("implementation", platform(bom))
             add("androidTestImplementation", platform(bom))
         }
     }
 
-    private fun Project.applyExtensions(libs: VersionCatalog) {
+    private fun Project.applyExtensions() {
         extensions.findByType<ApplicationExtension>()?.apply {
-            applyCommonExtensions(libs)
+            applyCommonExtensions(this@applyExtensions)
         }
         extensions.findByType<LibraryExtension>()?.apply {
-            applyCommonExtensions(libs)
+            applyCommonExtensions(this@applyExtensions)
         }
     }
 
-    private fun CommonExtension<*, *, *, *>.applyCommonExtensions(libs: VersionCatalog) {
+    private fun CommonExtension<*, *, *, *>.applyCommonExtensions(project: Project) {
 
         this.apply {
             buildFeatures {
@@ -46,7 +43,7 @@ class TrendComposePlugin : Plugin<Project> {
             }
 
             composeOptions {
-                kotlinCompilerExtensionVersion = libs.findVersion("composeCompiler").get().toString()
+                kotlinCompilerExtensionVersion = project.libs.versions.composeCompiler.get()
             }
 
         }
