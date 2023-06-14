@@ -8,11 +8,12 @@ data class Note(
     val body: Body,
     val photos: List<Photo>,
     val label: Label,
-    val tag: List<Tag>,
+    val tags: Set<Tag>,
+    val checklist: Set<Checklist>,
     val dateCreated: Instant,
     val dateModified: Instant
 ) {
-    init {
+    init { // TODO: read up DDD and add tests to models
         check(photos.size <= MAX_ALLOWED_PHOTOS)
     }
 
