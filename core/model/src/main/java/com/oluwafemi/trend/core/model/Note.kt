@@ -14,7 +14,9 @@ data class Note(
     val dateModified: Instant
 ) {
     init { // TODO: read up DDD and add tests to models
-        check(photos.size <= MAX_ALLOWED_PHOTOS)
+        require(photos.size <= MAX_ALLOWED_PHOTOS) {
+            "Only a maximum of 10 photos can be attached"
+        }
     }
 
     companion object {
