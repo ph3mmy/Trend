@@ -1,4 +1,4 @@
-package com.oluwafemi.trend.core.model
+package com.oluwafemi.trend.core.domain.model
 
 @JvmInline
 value class ID (val value: Int)

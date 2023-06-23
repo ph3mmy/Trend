@@ -1,4 +1,4 @@
-package com.oluwafemi.trend.core.model
+package com.oluwafemi.trend.core.domain.model
 
 data class Checklist(
     val id: ID,
