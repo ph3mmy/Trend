@@ -20,6 +20,7 @@ jacocoVersion = "0.16.0"
 junit4 = "4.13.2"
 junitJacoco = "0.8.8"
 kotlin = "1.8.21"
+kotlinxCoroutines = "1.6.4"
 kotlinxDateTime = "0.4.0"
 ktlint = "0.47.1"
 lint = "31.0.2"
@@ -45,8 +46,10 @@ androidx-test-ext = { module = "androidx.test.ext:junit-ktx", version.ref = "and
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 junit4 = { module = "junit:junit", version.ref = "junit4" }
-kotlin-date-time = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDateTime" }
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+kotlinx-date-time = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDateTime" }
 lint-api = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 
 [plugins]
