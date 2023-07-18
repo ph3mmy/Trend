@@ -24,6 +24,12 @@
       "groupName": "kotlin"
     },
     {
+      "matchPackagePatterns": [
+        "com.google.devtools.ksp"
+      ],
+      "groupName": "kotlin"
+    },
+    {
       "matchDepNames": [
         "rubocop",
         "nokogiri",
