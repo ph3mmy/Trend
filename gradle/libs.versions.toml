@@ -22,6 +22,7 @@ junitJacoco = "0.8.8"
 kotlin = "1.8.21"
 kotlinxCoroutines = "1.6.4"
 kotlinxDateTime = "0.4.0"
+kotlinxSerialization = "1.5.1"
 ktlint = "0.47.1"
 ksp = "1.8.21-1.0.11"
 lint = "31.0.2"
@@ -51,6 +52,7 @@ kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ve
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 kotlinx-date-time = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDateTime" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 lint-api = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
