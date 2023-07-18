@@ -5,6 +5,7 @@ plugins {
     id("com.trend.compose")
     id("com.trend.jacoco.application")
     id("jacoco")
+    id("com.trend.hilt")
 }
 
 android {

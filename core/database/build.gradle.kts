@@ -1,5 +1,6 @@
 plugins {
     id("com.trend.library")
+    id("com.trend.hilt")
     id("com.google.devtools.ksp")
 }
 
@@ -15,6 +16,8 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation(libs.kotlinx.date.time)
+    implementation(libs.kotlinx.serialization)
 
     ksp(libs.room.compiler)
     annotationProcessor(libs.room.compiler)

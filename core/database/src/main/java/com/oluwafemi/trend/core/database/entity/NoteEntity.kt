@@ -3,7 +3,7 @@ package com.oluwafemi.trend.core.database.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.time.Instant
+import kotlinx.datetime.Instant
 
 @Entity
 data class NoteEntity (
