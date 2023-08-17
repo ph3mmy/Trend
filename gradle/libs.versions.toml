@@ -6,7 +6,7 @@ sdkCompile = "33"
 sdkMin = "26"
 sdkTarget = "33"
 
-androidGradlePlugin = "8.0.2"
+androidGradlePlugin = "8.1.0"
 androidxAppCompat = "1.6.1"
 androidxCore = "1.10.1"
 androidxEspresso = "3.5.1"
