@@ -6,7 +6,7 @@ sdkCompile = "34"
 sdkMin = "26"
 sdkTarget = "34"
 
-androidGradlePlugin = "8.1.0"
+androidGradlePlugin = "8.1.1"
 androidxAppCompat = "1.6.1"
 androidxCore = "1.10.1"
 androidxEspresso = "3.5.1"
@@ -25,7 +25,7 @@ kotlinxDateTime = "0.4.0"
 kotlinxSerialization = "1.5.1"
 ktlint = "0.47.1"
 ksp = "1.9.0-1.0.13"
-lint = "31.1.0"
+lint = "31.1.1"
 room = "2.5.2"
 
 [libraries]
