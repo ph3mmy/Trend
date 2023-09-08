@@ -13,7 +13,7 @@ interface NoteDao {
     fun fetchAllNoteEntities(): Flow<List<NoteEntity>>
 
     @Upsert
-    suspend fun addNoteEntity(noteEntity: NoteEntity)
+    suspend fun addNoteEntities(noteEntities: List<NoteEntity>)
 
     @Query(
         value = """
@@ -22,5 +22,13 @@ interface NoteDao {
     """,
     )
     fun getNoteEntityById(noteId: Int): Flow<NoteEntity>
+
+    @Query(
+        value = """
+            DELETE FROM NoteEntity
+            WHERE id in (:noteIds)
+        """
+    )
+    suspend fun deleteNoteEntities(noteIds: List<Int>)
 
 }
