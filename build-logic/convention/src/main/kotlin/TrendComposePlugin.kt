@@ -35,7 +35,7 @@ class TrendComposePlugin : Plugin<Project> {
         }
     }
 
-    private fun CommonExtension<*, *, *, *, *>.applyCommonExtensions(project: Project) {
+    private fun CommonExtension<*, *, *, *, *, *>.applyCommonExtensions(project: Project) {
 
         this.apply {
             buildFeatures {
