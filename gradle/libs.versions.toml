@@ -68,3 +68,10 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 jacoco-plugin = { id = "com.vanniktech.android.junit.jacoco", version.ref = "jacocoVersion" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+# Trend convention plugins
+trend-application = { id = "com.trend.application", version = "unspecified" }
+trend-compose = { id = "com.trend.compose", version = "unspecified" }
+trend-hilt = { id = "com.trend.hilt", version = "unspecified" }
+trend-jacoco = { id = "com.trend.jacoco.application", version = "unspecified" }
+trend-library = { id = "com.trend.library", version = "unspecified" }
