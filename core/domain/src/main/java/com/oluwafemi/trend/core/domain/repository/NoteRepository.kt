@@ -18,9 +18,9 @@ interface NoteRepository {
     suspend fun updateNote(note: Note)
 
     /**
-     * Delete a note given the note [ID]
+     * Delete notes by the given note [ID]s
      */
-    suspend fun deleteNote(noteId: ID)
+    suspend fun deleteNotes(noteIds: List<ID>)
 
     /**
      * Returns a list of all notes
