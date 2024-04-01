@@ -5,9 +5,9 @@ plugins {
 
 dependencies {
     api(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.date.time)
 
     implementation(libs.kotlinx.serialization)
-    implementation(libs.kotlinx.date.time)
 
     testImplementation(libs.junit4)
 }
