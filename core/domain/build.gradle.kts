@@ -1,10 +1,13 @@
 plugins {
     id("kotlin")
+    id("kotlinx-serialization")
 }
 
 dependencies {
-    implementation(libs.kotlinx.date.time)
-    implementation(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.date.time)
+
+    implementation(libs.kotlinx.serialization)
 
     testImplementation(libs.junit4)
 }

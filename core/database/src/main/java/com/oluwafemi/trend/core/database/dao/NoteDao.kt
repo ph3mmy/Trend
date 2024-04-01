@@ -1,6 +1,7 @@
 package com.oluwafemi.trend.core.database.dao
 
 import androidx.room.Dao
+import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Upsert
 import com.oluwafemi.trend.core.database.entity.NoteEntity
@@ -11,6 +12,9 @@ interface NoteDao {
 
     @Query("SELECT * FROM NoteEntity ORDER BY date_created DESC")
     fun fetchAllNoteEntities(): Flow<List<NoteEntity>>
+
+    @Upsert
+    suspend fun addNoteEntity(noteEntity: NoteEntity)
 
     @Upsert
     suspend fun addNoteEntities(noteEntities: List<NoteEntity>)

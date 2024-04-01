@@ -1,5 +1,6 @@
 plugins {
-    id("com.trend.library")
+    alias(libs.plugins.trend.library)
+    alias(libs.plugins.trend.hilt)
 }
 
 android {
@@ -7,9 +8,11 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
+    implementation(projects.core.database)
+    implementation(projects.core.domain)
 
     testImplementation(libs.junit4)
+
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.androidx.test.espresso.core)
 }
