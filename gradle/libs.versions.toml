@@ -23,7 +23,7 @@ kotlinxCoroutines = "1.6.4" # Fixed to version 1.6.4
 kotlinxDateTime = "0.5.0"
 kotlinxSerialization = "1.6.3"
 ktlint = "0.47.1"
-ksp = "1.9.23-1.0.19"
+ksp = "1.9.23-1.0.20"
 lint = "31.3.1"
 room = "2.6.1"
 
