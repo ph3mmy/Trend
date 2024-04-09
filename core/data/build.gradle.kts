@@ -12,6 +12,7 @@ dependencies {
     implementation(projects.core.domain)
 
     testImplementation(libs.junit4)
+    testImplementation(kotlin("test")) // extract Test to a module
 
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.androidx.test.espresso.core)
