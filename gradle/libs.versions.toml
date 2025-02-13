@@ -2,9 +2,9 @@
 versionCode = "1"
 versionName = "1.0.0"
 
-sdkCompile = "34"
+sdkCompile = "35"
 sdkMin = "26"
-sdkTarget = "34"
+sdkTarget = "35"
 
 androidGradlePlugin = "8.8.0"
 androidxAppCompat = "1.7.0"
